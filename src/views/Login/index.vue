@@ -8,7 +8,7 @@
           <vue-typer
             erase-style="backspace"
             erase-delay="70"
-            :text="['Easily', 'Quickly', 'Efficiently']"
+            :text="['Easily.', 'Quickly.', 'Efficiently.']"
           ></vue-typer>
         </h1>
       </div>
@@ -70,24 +70,7 @@
     </div>
   </div>
 </template>
-
-<script>
-// import HelloWorld from "@/components/HelloWorld.vue";
-
-export default {
-  name: "Login",
-  data() {
-    return {
-      isResponding: false,
-    };
-  },
-  methods: {
-    toggleResponding(value) {
-      this.isResponding = value;
-    },
-  },
-};
-</script>
+<script src="./script.js"></script>
 
 <style lang="scss">
 @import "./style.scss";
