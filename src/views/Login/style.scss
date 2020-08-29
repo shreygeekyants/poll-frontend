@@ -1,0 +1,124 @@
+.login {
+  height: 100%;
+  display: flex;
+}
+.left-panel {
+  width: 50%;
+  height: 100%;
+  background-color: #f2cd5d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.right-panel {
+  width: 50%;
+  height: 100%;
+}
+.left-panel > div > h1 {
+  font-size: 30px;
+  color: black;
+  font-weight: 900;
+  z-index: 100;
+  margin: 0;
+}
+.left-panel > div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.heading {
+  font-size: 70px;
+  font-weight: 900;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  letter-spacing: 0.2rem;
+}
+.logo-design {
+  opacity: 1;
+  z-index: 0;
+  width: 20%;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  height: 33%;
+  // align-items: flex-start;
+}
+.login-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 33%;
+  font-size: 20px;
+}
+.vue-typer {
+  .custom.char {
+    color: black;
+    z-index: 100;
+  }
+}
+.form-container {
+  width: 50%;
+}
+
+.form-container > form > .el-form-item {
+  margin-bottom: 0px;
+}
+
+form {
+  width: 100%;
+}
+
+@media only screen and (max-width: 998px) {
+  .left-panel > div > h1 {
+    font-size: 18px;
+    color: black;
+    font-weight: 900;
+    z-index: 100;
+    margin: 0;
+  }
+  .heading {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: black;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    letter-spacing: 0.2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .login {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-panel {
+    width: 100%;
+    background-color: #f2cd5d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20%;
+  }
+  .right-panel {
+    width: 100%;
+    height: 100%;
+  }
+  .form-container {
+    width: 80%;
+  }
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    height: 18%;
+    // align-items: flex-start;
+  }
+}
