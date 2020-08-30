@@ -16,7 +16,7 @@
         <el-form-item label="Confirm Password">
           <el-input></el-input>
         </el-form-item>
-        <div>
+        <div :style="{ display: 'flex' }">
           <el-button type="primary" @click="goToLogin">
             Submit Details
           </el-button>
