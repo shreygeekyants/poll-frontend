@@ -18,23 +18,31 @@
         <img src="@/assets/images/logo.svg" class="logo-design" alt="" />
       </div>
       <div class="login-container">
-        <div v-if="!isResponding">
+        <div v-show="!isResponding">
           Login to create poll
         </div>
-        <div v-if="isResponding">
+        <div v-show="isResponding">
           Have a Survey ID?
         </div>
 
-        <div class="form-container" v-if="!isResponding">
-          <el-form>
-            <el-form-item label="Email Address">
-              <el-input placeholder="someone@xyz.com"></el-input>
+        <div class="form-container-login" v-show="!isResponding">
+          <el-form :model="loginForm" :rules="loginRules" ref="loginForm">
+            <el-form-item label="Email Address" prop="email">
+              <el-input
+                v-model="loginForm.email"
+                placeholder="someone@xyz.com"
+              ></el-input>
             </el-form-item>
-            <el-form-item label="Password">
-              <el-input placeholder="8 characters minimum"></el-input>
+            <el-form-item label="Password" prop="password">
+              <el-input
+                type="password"
+                v-model="loginForm.password"
+                placeholder="8 characters minimum"
+              ></el-input>
             </el-form-item>
             <el-button
               type="primary"
+              @click="login"
               :style="{ marginTop: '4%', width: '100%' }"
               >Login</el-button
             >
@@ -51,12 +59,17 @@
           >
         </div>
 
-        <div class="form-container" v-if="isResponding">
-          <el-form>
-            <el-form-item label="Survey ID">
-              <el-input></el-input>
+        <div class="form-container-response" v-show="isResponding">
+          <el-form
+            :model="responseForm"
+            :rules="responseRules"
+            ref="responseForm"
+          >
+            <el-form-item label="Survey ID" prop="surveyId">
+              <el-input v-model="responseForm.surveyId"></el-input>
             </el-form-item>
             <el-button
+              @click="loginAsResponder"
               type="primary"
               :style="{ marginTop: '4%', width: '100%' }"
               >Submit
