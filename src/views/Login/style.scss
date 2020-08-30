@@ -1,3 +1,4 @@
+@import "@/assets/scss/variables.scss";
 .login {
   height: 100%;
   display: flex;
@@ -5,7 +6,7 @@
 .left-panel {
   width: 50%;
   height: 100%;
-  background-color: #f2cd5d;
+  background-color: $tertiary-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,11 +68,22 @@
 }
 
 .form-container > form > .el-form-item {
-  margin-bottom: 0px;
+  margin-bottom: 5px;
 }
 
 form {
   width: 100%;
+}
+
+.signup-text {
+  font-size: 14px;
+  color: #64676b;
+  margin-top: 2%;
+  span {
+    color: $primary-color;
+    font-weight: 700;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (max-width: 998px) {

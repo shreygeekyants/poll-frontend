@@ -9,5 +9,8 @@ export default {
     toggleResponding(value) {
       this.isResponding = value;
     },
+    goToSignup() {
+      this.$router.push("/signup");
+    },
   },
 };

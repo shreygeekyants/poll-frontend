@@ -38,6 +38,9 @@
               :style="{ marginTop: '4%', width: '100%' }"
               >Login</el-button
             >
+            <div class="signup-text">
+              Don't have an account? <span @click="goToSignup">Sign Up</span>
+            </div>
           </el-form>
           <el-divider content-position="center">OR</el-divider>
           <el-button

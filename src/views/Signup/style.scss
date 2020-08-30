@@ -1,0 +1,40 @@
+@import "@/assets/scss/variables.scss";
+.signup {
+  height: 100%;
+  width: 100%;
+  background-color: $tertiary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup-container {
+  background-color: white;
+  height: 80%;
+  width: 30%;
+  min-width: 350px;
+  border-radius: 10px;
+  box-shadow: 2px 5px 20px #636060;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  .signup-text {
+    // font-weight: 900;
+    font-size: 19px;
+  }
+  .el-form {
+    width: 80%;
+
+    .el-form-item {
+      margin-bottom: 5px;
+    }
+    .el-button {
+      width: 48%;
+      margin-top: 5%;
+    }
+  }
+}
