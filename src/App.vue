@@ -1,10 +1,33 @@
 <template>
   <div id="app">
-    <transition name="slide-fade">
-      <router-view />
-    </transition>
+    <Header />
+    <div :style="{display:'flex', height:'88vh'}">
+      <Sidebar v-if="auth" />
+      <div class="main">
+        <!-- <transition name="slide-fade"> -->
+        <router-view />
+        <!-- </transition> -->
+      </div>
+    </div>
   </div>
 </template>
+
+<script>
+import Sidebar from "@/core/Sidebar";
+import Header from "@/core/Header";
+import { get } from "lodash";
+export default {
+  computed: {
+    auth() {
+      return get(this.$route, "meta.sidebar", true);
+    },
+  },
+  components: {
+    Sidebar,
+    Header
+  },
+};
+</script>
 
 <style>
 #app {
@@ -13,6 +36,12 @@
   -moz-osx-font-smoothing: grayscale;
 
   height: 100%;
+}
+.main {
+  /* display: flex; */
+  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
 .slide-fade-enter-active {
   transition: all 0.2s ease;
