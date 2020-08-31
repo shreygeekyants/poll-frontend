@@ -1,4 +1,14 @@
 .sidebar {
   width: 300px;
   position: fixed;
+  box-shadow: 1px 0 20px -2px #888;
+  padding-top: 2rem;
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .el-button {
+    width: 90%;
+  }
 }

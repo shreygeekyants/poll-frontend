@@ -7,7 +7,10 @@
     text-color="black"
     active-text-color="#5398BE"
   >
-    <el-menu-item index="1">
+    <div class="button-container">
+      <el-button type="primary">Create New Poll</el-button>
+    </div>
+    <!-- <el-menu-item index="1">
       <span>Navigator One</span>
     </el-menu-item>
     <el-menu-item index="2">
@@ -15,7 +18,7 @@
     </el-menu-item>
     <el-menu-item index="3">
       <span>Navigator Three</span>
-    </el-menu-item>
+    </el-menu-item>-->
   </el-menu>
 </template>
 
