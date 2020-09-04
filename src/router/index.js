@@ -17,13 +17,13 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login,
-    meta: { sidebar: false },
+    meta: { sidebar: false, header: false },
   },
   {
     path: "/signup",
     name: "Signup",
     component: Signup,
-    meta: { sidebar: false },
+    meta: { sidebar: false, header: false },
   },
 ];
 

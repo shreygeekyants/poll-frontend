@@ -1,12 +1,10 @@
 <template>
   <div id="app">
-    <Header />
-    <div :style="{display:'flex', height:'88vh'}">
-      <Sidebar v-if="auth" />
+    <Header v-if="showHeader" />
+    <div :class="showHeader ? 'app-container' : 'app-container-full'">
+      <Sidebar v-if="showSidebar && sidebarVisible" />
       <div class="main">
-        <!-- <transition name="slide-fade"> -->
         <router-view />
-        <!-- </transition> -->
       </div>
     </div>
   </div>
@@ -18,13 +16,19 @@ import Header from "@/core/Header";
 import { get } from "lodash";
 export default {
   computed: {
-    auth() {
+    showSidebar() {
       return get(this.$route, "meta.sidebar", true);
+    },
+    sidebarVisible() {
+      return this.$store.state.sidebarVisible;
+    },
+    showHeader() {
+      return get(this.$route, "meta.header", true);
     },
   },
   components: {
     Sidebar,
-    Header
+    Header,
   },
 };
 </script>
@@ -35,6 +39,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  height: 100%;
+}
+.app-container {
+  display: flex;
+  height: 88vh;
+}
+.app-container-full {
+  display: flex;
   height: 100%;
 }
 .main {

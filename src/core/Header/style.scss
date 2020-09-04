@@ -1,21 +1,23 @@
 @import "@/assets/scss/variables.scss";
 header {
-  // background-color: $primary-color;
   background-color: black;
   width: 100%;
-  // position: fixed;
   padding-top: 1%;
   padding-bottom: 1%;
-  // z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
+.sidebar-welcome-text {
+  color: white;
+  margin-right: 2%;
+}
 .sidebar-logo-container {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: flex;
   letter-spacing: 0.2rem;
   align-items: center;
-  // justify-content: space-between;
   font-size: 20px;
   font-weight: 800;
   width: 10rem;
@@ -23,5 +25,43 @@ header {
   padding-left: 1.3%;
   img {
     margin-right: 5%;
+  }
+  .el-button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar-welcome-text {
+    color: white;
+    margin-right: 2%;
+    font-size: 12px;
+  }
+  .sidebar-logo-container {
+    img {
+      width: 30%;
+      margin-right: 5%;
+    }
+    .app-name {
+      font-size: 14px;
+    }
+    .el-button {
+      padding: 0;
+      font-size: 20px;
+      background-color: black;
+      color: white;
+      margin-right: 1rem;
+      padding: 0px 4px;
+      display: none;
+      display: block;
+    }
+    .el-button:hover {
+      padding: 0;
+      font-size: 20px;
+      background-color: white;
+      color: black;
+      margin-right: 1rem;
+      padding: 0px 4px;
+    }
   }
 }
