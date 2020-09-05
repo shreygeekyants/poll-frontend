@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    sidebarVisible: true,
+    sidebarVisible: screen.width > 768 ? true : false,
   },
   mutations: {
     changeSidebarVisibility(state) {

@@ -15,9 +15,9 @@
               rows="5"
             ></el-input>
           </el-form-item>
-          <el-form-item :style="{marginBottom:'5px'}" label="Answer Options"></el-form-item>
+          <el-form-item :style="{ marginBottom: '5px' }" label="Answer Options"></el-form-item>
           <el-form-item v-for="option in pollForm.answerOptions" :key="option.key" label="Option: ">
-            <div :style="{display:'flex'}">
+            <div :style="{ display: 'flex' }">
               <el-input v-model="option.value"></el-input>
               <el-tooltip content="Remove Option">
                 <el-button
@@ -25,7 +25,7 @@
                   class="danger-button"
                   type="danger"
                   icon="el-icon-circle-close"
-                  v-if="![1,2].includes(option.key)"
+                  v-if="![1, 2].includes(option.key)"
                 ></el-button>
               </el-tooltip>
             </div>
@@ -41,8 +41,7 @@
   </div>
 </template>
 
-<script src="./script.js">
-</script>
+<script src="./script.js"></script>
 
 <style lang="scss">
 @import "./style.scss";

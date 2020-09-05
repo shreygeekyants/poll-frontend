@@ -13,6 +13,9 @@ export default {
       },
     };
   },
+  mounted() {
+    console.log(screen.width, "*** screen");
+  },
   methods: {
     addOption() {
       let node = this.pollForm.answerOptions;
