@@ -1,11 +1,13 @@
 <template>
-  <div class="dashboard-body">
-    <h2>Dashboard Screen</h2>
+  <div class="responses-body">
+    <h2>Your Responses</h2>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Responses",
+};
 </script>
 
 <style lang="scss">

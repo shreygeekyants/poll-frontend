@@ -1,0 +1,41 @@
+@import "@/assets/scss/variables.scss";
+.create-poll-body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  background-color: #eff0ea;
+  padding: 2rem 3rem;
+}
+.create-container {
+  background-color: white;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 2px 5px 10px #adacac;
+  border-top: solid 5px $secondary-color;
+}
+.container-heading {
+  font-size: 19px;
+}
+
+.create-form-body {
+  margin-top: 2%;
+  .el-textarea__inner {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+  }
+  .danger-button {
+    padding: 0px 10px;
+    font-size: 22px;
+    margin-left: 10px;
+  }
+  .submit-button {
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    .el-button {
+      width: 50%;
+    }
+  }
+}

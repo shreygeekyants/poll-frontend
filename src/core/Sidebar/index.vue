@@ -9,18 +9,20 @@
       active-text-color="#5398BE"
     >
       <div class="button-container">
-        <el-button type="primary">Create New Poll</el-button>
+        <el-button type="primary" @click="goToScreen('/create-new-poll')"
+          >Create New Poll</el-button
+        >
       </div>
       <div class="dashboard-menu">
-        <el-menu-item index="1">
+        <el-menu-item index="1" @click="goToScreen('/dashboard')">
           <i class="mdi mdi-view-dashboard"></i>
           <span>Dashboard</span>
         </el-menu-item>
-        <el-menu-item index="2">
+        <el-menu-item index="2" @click="goToScreen('/polls')">
           <i class="mdi mdi-poll"></i>
           <span>Your Polls</span>
         </el-menu-item>
-        <el-menu-item index="3">
+        <el-menu-item index="3" @click="goToScreen('/responses')">
           <i class="mdi mdi-comment-text"></i>
           <span>Your Responses</span>
         </el-menu-item>
@@ -32,6 +34,11 @@
 <script>
 export default {
   name: "Sidebar",
+  methods: {
+    goToScreen(url) {
+      this.$router.push(url);
+    },
+  },
 };
 </script>
 

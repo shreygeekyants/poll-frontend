@@ -1,11 +1,13 @@
 <template>
-  <div class="dashboard-body">
-    <h2>Dashboard Screen</h2>
+  <div class="polls-body">
+    <h2>Your Polls</h2>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Polls",
+};
 </script>
 
 <style lang="scss">

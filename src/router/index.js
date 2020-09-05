@@ -3,16 +3,13 @@ import VueRouter from "vue-router";
 import Login from "../views/Login";
 import Signup from "../views/Signup";
 import Dashboard from "../views/Dashboard";
+import Polls from "../views/Polls";
+import Responses from "../views/Responses";
+import CreatePoll from "../views/CreatePoll";
 
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: "/",
-    alias: "/dashboard",
-    name: "Dashboard",
-    component: Dashboard,
-  },
   {
     path: "/login",
     name: "Login",
@@ -24,6 +21,27 @@ const routes = [
     name: "Signup",
     component: Signup,
     meta: { sidebar: false, header: false },
+  },
+  {
+    path: "/",
+    alias: "/dashboard",
+    name: "Dashboard",
+    component: Dashboard,
+  },
+  {
+    path: "/polls",
+    name: "Polls",
+    component: Polls,
+  },
+  {
+    path: "/responses",
+    name: "Responses",
+    component: Responses,
+  },
+  {
+    path: "/create-new-poll",
+    name: "CreatePoll",
+    component: CreatePoll,
   },
 ];
 
