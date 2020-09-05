@@ -66,4 +66,11 @@ export default {
   transform: translateX(10px);
   opacity: 0;
 }
+
+@media only screen and (max-width: 768px) {
+  .app-container {
+    display: flex;
+    height: 100vh;
+  }
+}
 </style>

@@ -1,7 +1,5 @@
 <template>
-  <div class="dashboard-body">
-    <h2>Dashboard Screen</h2>
-  </div>
+  <div class="dashboard-body"></div>
 </template>
 
 <script>

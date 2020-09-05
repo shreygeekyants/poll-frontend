@@ -1,0 +1,27 @@
+.poll-list-item {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #cccccc;
+  padding: 0.5% 0%;
+  cursor: pointer;
+  .left-container {
+    width: 10%;
+    text-align: center;
+    img {
+      width: 50%;
+    }
+  }
+  .right-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    .poll-heading {
+      font-size: 16px;
+    }
+    .poll-subheading {
+      font-size: 13px;
+      color: #7e7d7d;
+    }
+  }
+}
