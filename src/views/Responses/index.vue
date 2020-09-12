@@ -1,13 +1,17 @@
 <template>
   <div class="responses-body">
-    <h2>Your Responses</h2>
+    <div class="response-container">
+      <div class="container-heading">Polls that you responded to</div>
+      <div class="polls-list">
+        <div v-for="polls in yourdumbpolls" :key="polls.heading">
+          <PollListItem :heading="polls.heading" :subheading="polls.subheading" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "Responses",
-};
+<script src="./script.js">
 </script>
 
 <style lang="scss">

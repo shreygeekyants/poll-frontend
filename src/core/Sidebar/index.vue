@@ -3,15 +3,12 @@
     <el-menu
       :collapse="false"
       class="sidebar"
-      default-active="1"
       background-color="#F2CD5D"
       text-color="black"
       active-text-color="#5398BE"
     >
       <div class="button-container">
-        <el-button type="primary" @click="goToScreen('/create-new-poll')"
-          >Create New Poll</el-button
-        >
+        <el-button type="primary" @click="goToScreen('/create-new-poll')">Create New Poll</el-button>
       </div>
       <div class="dashboard-menu">
         <el-menu-item index="1" @click="goToScreen('/dashboard')">
