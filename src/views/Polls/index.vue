@@ -4,7 +4,7 @@
       <div class="container-heading">Polls that you created</div>
       <div class="polls-list">
         <div v-for="polls in yourdumbpolls" :key="polls.heading">
-          <PollListItem :heading="polls.heading" :subheading="polls.subheading" />
+          <PollListItem :viewPoll="viewPoll" :polls="polls" />
         </div>
       </div>
     </div>

@@ -10,4 +10,10 @@ export default {
   components: {
     PollListItem,
   },
+  methods: {
+    viewPoll(url, currentPoll) {
+      this.$store.dispatch("setCurrentPoll", currentPoll);
+      this.$router.push(url);
+    },
+  },
 };

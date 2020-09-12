@@ -6,6 +6,7 @@ import Dashboard from "../views/Dashboard";
 import Polls from "../views/Polls";
 import Responses from "../views/Responses";
 import CreatePoll from "../views/CreatePoll";
+import ViewPoll from "../views/ViewPoll";
 
 Vue.use(VueRouter);
 
@@ -42,6 +43,11 @@ const routes = [
     path: "/create-new-poll",
     name: "CreatePoll",
     component: CreatePoll,
+  },
+  {
+    path: "/view-poll",
+    name: "ViewPoll",
+    component: ViewPoll,
   },
 ];
 

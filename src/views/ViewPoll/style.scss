@@ -1,0 +1,28 @@
+@import "@/assets/scss/variables.scss";
+@import "./node_modules/vue-progressbar-component/src/scss/progressbar";
+
+.view-poll-body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #eff0ea;
+  padding: 2rem 3rem;
+}
+.view-poll-container {
+  background-color: white;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 2px 5px 10px #adacac;
+  border-top: solid 5px $secondary-color;
+}
+.container-heading {
+  font-size: 19px;
+}
+.container-subheading {
+  margin-top: 1%;
+  color: rgb(92, 91, 91);
+}
+.progress {
+  margin-top: 4%;
+}
