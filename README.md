@@ -1,4 +1,5 @@
-# poll-frontend
+# Surway
+## Get your surveys done quickly, easily and efficiently.
 
 ## Project setup
 ```
